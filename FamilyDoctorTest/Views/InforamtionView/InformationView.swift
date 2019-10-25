@@ -10,14 +10,6 @@ import UIKit
 import ReactiveSwift
 import ReactiveCocoa
 
-final class InformationViewModel {
-    let pill: MutableProperty<Pill>
-    
-    init(pill: Pill) {
-        self.pill = MutableProperty<Pill>(pill)
-    }
-}
-
 private let horizontalMargin: CGFloat = 30
 private let verticalMargin: CGFloat = 30
 

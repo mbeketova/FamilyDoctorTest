@@ -6,7 +6,8 @@
 //  Copyright © 2019 Mariya. All rights reserved.
 //
 
-import Foundation
+import ReactiveSwift
+import ReactiveCocoa
 
 enum ErrorAttributes: String {
     case title = "title"

@@ -7,12 +7,12 @@
 //
 
 import Foundation
-import Result
 import RealmSwift
 import ReactiveSwift
 
 protocol MainViewModelDelegate: class {
     func reload()
+    func show(error: Error)
 }
 
 final class MainViewModel {
@@ -50,9 +50,12 @@ final class MainViewModel {
 
 //MARK: - Requests
 extension MainViewModel {
-    func getPills(){
+    func loadPills(){
         self.isLoading.value = true
-        let dispose = self.service.getPills().startWithResult { [weak self](result) in
+        let dispose = self.service.loadPills().startWithResult { [weak self](result) in
+            if let error = result.error {
+                self?.delegate?.show(error: error)
+            }
             self?.isLoading.value = false
         }
         self.disposable.append(dispose)

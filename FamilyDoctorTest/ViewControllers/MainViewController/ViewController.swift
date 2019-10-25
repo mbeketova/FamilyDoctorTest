@@ -8,7 +8,6 @@
 
 import UIKit
 import Gemini
-import Result
 import ReactiveSwift
 
 private let scale: CGFloat = 0.8
@@ -51,7 +50,7 @@ final class ViewController: UIViewController {
         super.viewWillAppear(animated)
         guard self.isFirstLoad else { return }
         self.isFirstLoad = false
-        getPills()
+        loadPills()
     }
 }
 
@@ -96,12 +95,16 @@ extension ViewController: MainViewModelDelegate {
             self.collectionView.reloadData()
         }
     }
+    
+    func show(error: Error) {
+        showMessage(title: error.title ?? "Error", msg: error.message)
+    }
 }
 
 //MARK: - Requests
 private extension ViewController {
-    func getPills() {
-        self.viewModel.getPills()
+    func loadPills() {
+        self.viewModel.loadPills()
     }
 }
 
@@ -201,7 +204,13 @@ private extension ViewController {
     }
     
     @objc func rightButtonAction() {
-        getPills()
+        loadPills()
+    }
+    
+    func showMessage(title: String, msg: String) {
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

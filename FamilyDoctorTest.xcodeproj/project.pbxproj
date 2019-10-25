@@ -41,6 +41,7 @@
 		74C89DB32360F18600BAE824 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C89DB12360F18600BAE824 /* Main.storyboard */; };
 		74C89DB52360F18900BAE824 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74C89DB42360F18900BAE824 /* Assets.xcassets */; };
 		74C89DB82360F18900BAE824 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C89DB62360F18900BAE824 /* LaunchScreen.storyboard */; };
+		74FBBD912362F4F500D02003 /* InformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FBBD902362F4F500D02003 /* InformationViewModel.swift */; };
 		E6AB19D8C3286411033DF742 /* Pods_defaults_FamilyDoctorTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A4C24BC8E84B9BEA4F9F9C /* Pods_defaults_FamilyDoctorTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		74C89DB42360F18900BAE824 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74C89DB72360F18900BAE824 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74C89DB92360F18900BAE824 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74FBBD902362F4F500D02003 /* InformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewModel.swift; sourceTree = "<group>"; };
 		B7C39A929454B16233F646B7 /* Pods-defaults-FamilyDoctorTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-defaults-FamilyDoctorTest.release.xcconfig"; path = "Target Support Files/Pods-defaults-FamilyDoctorTest/Pods-defaults-FamilyDoctorTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,7 +164,7 @@
 		7488B6D6236177BF004F5607 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7488B6D7236177DF004F5607 /* InformationView.swift */,
+				74FBBD8F2362F4D800D02003 /* InforamtionView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -260,6 +262,15 @@
 				74C89DB92360F18900BAE824 /* Info.plist */,
 			);
 			path = FamilyDoctorTest;
+			sourceTree = "<group>";
+		};
+		74FBBD8F2362F4D800D02003 /* InforamtionView */ = {
+			isa = PBXGroup;
+			children = (
+				7488B6D7236177DF004F5607 /* InformationView.swift */,
+				74FBBD902362F4F500D02003 /* InformationViewModel.swift */,
+			);
+			path = InforamtionView;
 			sourceTree = "<group>";
 		};
 		ADA8FDB71D2D3DB170CC3F96 /* Frameworks */ = {
@@ -401,6 +412,7 @@
 				7488B6ED2361BB00004F5607 /* SessionManager.swift in Sources */,
 				74C89DAC2360F18600BAE824 /* AppDelegate.swift in Sources */,
 				7488B6EB2361B9F2004F5607 /* Realm+Instance.swift in Sources */,
+				74FBBD912362F4F500D02003 /* InformationViewModel.swift in Sources */,
 				7488B6D523616E72004F5607 /* UIDevice+Additions.swift in Sources */,
 				74C89DAE2360F18600BAE824 /* SceneDelegate.swift in Sources */,
 				7488B6CD2360F6C4004F5607 /* CardCollectionCell.swift in Sources */,

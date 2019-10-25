@@ -10,7 +10,6 @@ abstract_target 'defaults' do
     pod 'RealmSwift'
     pod 'ReactiveCocoa'
     pod 'Gemini'
-    pod 'Result'
     pod 'AlamofireImage'
     
   target 'FamilyDoctorTest'

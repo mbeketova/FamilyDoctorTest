@@ -11,13 +11,13 @@ import Alamofire
 import RealmSwift
 
 enum PillsNetworkRouter: URLRequestConvertible {
-    case getPills
+    case loadPills
 }
 
 extension PillsNetworkRouter: NetworkRouterParams {
     var path: String {
         switch self {
-        case .getPills:
+        case .loadPills:
             return "test_task"
         }
     }

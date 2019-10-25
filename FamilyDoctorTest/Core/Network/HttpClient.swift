@@ -10,7 +10,6 @@ import Foundation
 import Alamofire
 import ReactiveSwift
 import ReactiveCocoa
-import Result
 
 final class HttpClient {
     static let shared = HttpClient()
@@ -161,8 +160,11 @@ fileprivate extension HttpClient {
         guard data.count != 0 else { observer.sendCompleted(); return }
         //201 code
         guard String(data: data.subdata(in: 0..<2), encoding: .utf8) != "[]" else { observer.send(value: () as AnyObject); return }
-        let parsingResult = JsonParser.parse(data: data)
-        observer.send(value: parsingResult)
+        if let parsingResult = JsonParser.parse(data: data) {
+            observer.send(value: parsingResult)
+        } else {
+            observer.send(error: Error.commonError(with: "Invalid Json"))
+        }
     }
     
     func handleErrorResponse(for data: Data, observer: Signal<AnyObject, Error>.Observer) {

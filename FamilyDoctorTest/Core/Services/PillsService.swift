@@ -9,10 +9,9 @@
 import Foundation
 import RealmSwift
 import ReactiveSwift
-import Result
 
 private protocol Interface: class {
-    func getPills() -> SignalProducer<Void, Error>
+    func loadPills() -> SignalProducer<Void, Error>
 }
 
 //MARK: - Interface
@@ -23,8 +22,8 @@ final class PillsService: Interface {
         self.realmConfig = config
     }
     
-    func getPills() -> SignalProducer<Void, Error> {
-        let request = PillsNetworkRouter.getPills
+    func loadPills() -> SignalProducer<Void, Error> {
+        let request = PillsNetworkRouter.loadPills
         return HttpClient.shared.load(request: request, qos: .utility)
             .flatMap(.latest, save)
             .observe(on: QueueScheduler.main)
@@ -34,8 +33,12 @@ final class PillsService: Interface {
 //MARK: - Save
 private extension PillsService {
     func save(response: AnyObject) -> SignalProducer<Void, Error> {
-        guard let response = response as? [String : AnyObject] else { return SignalProducer(error: Error.commonError(with: "response error")) }
-        guard let pills = response["pills"] as? [[String : AnyObject]] else { return SignalProducer(error: Error.commonError(with: "pills json error")) }
+        guard let response = response as? [String : AnyObject] else {
+            return SignalProducer(error: Error.commonError(with: "response error"))
+        }
+        guard let pills = response["pills"] as? [[String : AnyObject]] else {
+            return SignalProducer(error: Error.commonError(with: "pills json error"))
+        }
         return SignalProducer {sink, dispose in
             let realm = Realm.instance(with: self.realmConfig)
             try! realm.write {
