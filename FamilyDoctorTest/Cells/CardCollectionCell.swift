@@ -13,8 +13,8 @@ private let aspectRatio: CGFloat = 305/250
 
 final class CardCollectionCellViewModel {
     let imageUrlString: String
-    init(img: String) {
-        self.imageUrlString = img
+    init(image: String) {
+        self.imageUrlString = image
     }
 }
 
@@ -66,8 +66,8 @@ private extension CardCollectionCell {
         self.imageView.contentMode = .scaleToFill
         self.imageView.backgroundColor = .gray
         self.imageView.clipsToBounds = true
-//        self.imageView.layer.borderColor = UIColor.gray.cgColor
-//        self.imageView.layer.borderWidth = 1
+        self.imageView.layer.borderColor = UIColor.gray.cgColor
+        self.imageView.layer.borderWidth = 1
         self.imageView.layer.cornerRadius = Constants.UI.Sizes.cornerRadius
         self.contentView.addSubview(self.imageView)
     }

@@ -14,7 +14,8 @@ extension Realm.Configuration {
 }
 
 extension Realm {
-    private static let inMemoryConfiguration = Realm.Configuration(inMemoryIdentifier: "InMemory", schemaVersion: Constants.realmSchemaVersion)
+    private static let inMemoryConfiguration = Realm.Configuration(inMemoryIdentifier: "InMemory",
+                                                                   schemaVersion: Constants.realmSchemaVersion)
     // To prevent whole in memory realm deallocation
     private static let inMemoryMainRealm = try! Realm(configuration: inMemoryConfiguration)
     

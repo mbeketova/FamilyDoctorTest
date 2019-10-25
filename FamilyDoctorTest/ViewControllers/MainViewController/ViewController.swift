@@ -230,7 +230,8 @@ private extension ViewController {
         layout.itemSize = CGSize(width: itemSize.width, height: itemSize.height)
         layout.minimumLineSpacing = CGFloat.leastNormalMagnitude
         let horizontalMargin: CGFloat = (UIScreen.width - itemSize.width)/2
-        layout.sectionInset = UIEdgeInsets(top: verticalMargin, left: horizontalMargin, bottom: verticalMargin, right: horizontalMargin)
+        layout.sectionInset = UIEdgeInsets(top: verticalMargin, left: horizontalMargin,
+                                           bottom: verticalMargin, right: horizontalMargin)
         layout.scrollDirection = .horizontal
         return layout
     }

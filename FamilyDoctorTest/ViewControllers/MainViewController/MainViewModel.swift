@@ -44,7 +44,7 @@ final class MainViewModel {
     }
     
     func imageViewModel(for index: Int)  -> CardCollectionCellViewModel{
-        return CardCollectionCellViewModel(img: self.results[index].img)
+        return CardCollectionCellViewModel(image: self.results[index].img)
     }
 }
 

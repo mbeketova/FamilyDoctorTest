@@ -13,6 +13,6 @@ abstract_target 'defaults' do
     pod 'Gemini'
     pod 'AlamofireImage'
     
-  target 'FamilyDoctorTest'
+target 'FamilyDoctorTest'
   
 end

@@ -24,7 +24,6 @@ extension UIImageView {
         get { return self.image }
     }
     
-    
 }
 
 //MARK: - Reactive

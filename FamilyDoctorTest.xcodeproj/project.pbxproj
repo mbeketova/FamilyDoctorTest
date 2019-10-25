@@ -28,7 +28,7 @@
 		7488B6F72361C258004F5607 /* PillsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7488B6F62361C258004F5607 /* PillsService.swift */; };
 		7488B6F92361CF46004F5607 /* Alamofire+Cancel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7488B6F82361CF46004F5607 /* Alamofire+Cancel.swift */; };
 		7488B6FB2361CFFA004F5607 /* Observer+sendAndComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7488B6FA2361CFFA004F5607 /* Observer+sendAndComplete.swift */; };
-		7488B6FD2361D072004F5607 /* ETagCashe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7488B6FC2361D072004F5607 /* ETagCashe.swift */; };
+		7488B6FD2361D072004F5607 /* ETagCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7488B6FC2361D072004F5607 /* ETagCache.swift */; };
 		7488B7002361E1CE004F5607 /* AlamofireImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7488B6FF2361E1CE004F5607 /* AlamofireImageDownloader.swift */; };
 		7488B7022361E233004F5607 /* UIImage+Rendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7488B7012361E233004F5607 /* UIImage+Rendering.swift */; };
 		7488B7042361E49A004F5607 /* UIImageView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7488B7032361E49A004F5607 /* UIImageView+Download.swift */; };
@@ -69,7 +69,7 @@
 		7488B6F62361C258004F5607 /* PillsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillsService.swift; sourceTree = "<group>"; };
 		7488B6F82361CF46004F5607 /* Alamofire+Cancel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Cancel.swift"; sourceTree = "<group>"; };
 		7488B6FA2361CFFA004F5607 /* Observer+sendAndComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observer+sendAndComplete.swift"; sourceTree = "<group>"; };
-		7488B6FC2361D072004F5607 /* ETagCashe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETagCashe.swift; sourceTree = "<group>"; };
+		7488B6FC2361D072004F5607 /* ETagCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETagCache.swift; sourceTree = "<group>"; };
 		7488B6FF2361E1CE004F5607 /* AlamofireImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireImageDownloader.swift; sourceTree = "<group>"; };
 		7488B7012361E233004F5607 /* UIImage+Rendering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Rendering.swift"; sourceTree = "<group>"; };
 		7488B7032361E49A004F5607 /* UIImageView+Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Download.swift"; sourceTree = "<group>"; };
@@ -186,18 +186,18 @@
 				7488B6E32361B623004F5607 /* Error.swift */,
 				7488B6E52361B771004F5607 /* HttpClient.swift */,
 				7488B6EC2361BB00004F5607 /* SessionManager.swift */,
-				7488B6FC2361D072004F5607 /* ETagCashe.swift */,
+				7488B6FC2361D072004F5607 /* ETagCache.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
 		};
-		7488B6E72361B8B2004F5607 /* Resurces */ = {
+		7488B6E72361B8B2004F5607 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				74C89DB42360F18900BAE824 /* Assets.xcassets */,
 				7488B6E82361B934004F5607 /* Basic.swift */,
 			);
-			path = Resurces;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		7488B6EE2361BB78004F5607 /* Routers */ = {
@@ -247,7 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				7488B6FE2361E1B5004F5607 /* Utils */,
-				7488B6E72361B8B2004F5607 /* Resurces */,
+				7488B6E72361B8B2004F5607 /* Resources */,
 				7488B6D92361B2F5004F5607 /* Model */,
 				7488B6D6236177BF004F5607 /* Views */,
 				7488B6CF2360F7B7004F5607 /* Protocols */,
@@ -407,7 +407,7 @@
 			files = (
 				7488B6D32360F964004F5607 /* UIScreen+Size.swift in Sources */,
 				74C89DB02360F18600BAE824 /* ViewController.swift in Sources */,
-				7488B6FD2361D072004F5607 /* ETagCashe.swift in Sources */,
+				7488B6FD2361D072004F5607 /* ETagCache.swift in Sources */,
 				7488B6F42361C1DF004F5607 /* URLRequestConvertible+RouterParams.swift in Sources */,
 				7488B6ED2361BB00004F5607 /* SessionManager.swift in Sources */,
 				74C89DAC2360F18600BAE824 /* AppDelegate.swift in Sources */,

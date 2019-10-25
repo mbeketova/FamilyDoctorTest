@@ -42,19 +42,19 @@ final class InformationView: UIView {
         self.titleLabel.text = self.viewModel.pill.value.name
         self.subtitleLabel.text = self.viewModel.pill.value.displayDescription
         self.reactive.changedTitles <~ self.viewModel.pill
-        layoutSubviews()
+        setNeedsLayout()
     }
     
     func configure(newTitle: String) {
         hide(label: self.titleLabel, newText: newTitle) { [weak self] in
-            self?.layoutSubviews()
+            self?.setNeedsLayout()
             self?.show(label: self?.titleLabel ?? UILabel())
         }
     }
     
     func configure(newSubtitle: String) {
         hide(label: self.subtitleLabel, newText: newSubtitle) { [weak self] in
-            self?.layoutSubviews()
+            self?.setNeedsLayout()
             self?.show(label: self?.subtitleLabel ?? UILabel())
         }
     }
